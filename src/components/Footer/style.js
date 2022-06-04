@@ -25,6 +25,7 @@ export const StyledFooter = styled.footer`
     font-weight: 700;
     font-size: 18px;
     color: #ffffff;
+    flex: none;
   }
 
   ul {
@@ -33,6 +34,21 @@ export const StyledFooter = styled.footer`
     align-items: center;
     width: 90%;
     justify-content: ${({ cartItens }) => (cartItens ? "center" : "")};
+    overflow-y: auto;
+  }
+
+  ul::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ul::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  ul::-webkit-scrollbar-thumb {
+    background-color: #27ae60;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
   }
 
   li {

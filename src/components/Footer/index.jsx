@@ -24,6 +24,10 @@ function Footer({
       (element) => element.id !== Number(value)
     );
     setCartProducts([...newCart]);
+    console.log(cartProducts);
+    if (cartProducts.length <= 1) {
+      setCart(false);
+    }
   }
 
   function eraseCart() {
